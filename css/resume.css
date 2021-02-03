@@ -10,6 +10,16 @@ body {
   color: #868e96;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+    background: white;
+}
+body::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
