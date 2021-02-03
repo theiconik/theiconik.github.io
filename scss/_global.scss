@@ -4,6 +4,16 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
+  
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #bd5d38;
+  }
 }
 @media (min-width: 992px) {
   body {
