@@ -1,6 +1,13 @@
 import "./App.css";
-import { Heading, Text, Button, HStack, useColorMode } from "@chakra-ui/react";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import {
+  Heading,
+  Text,
+  Button,
+  HStack,
+  useColorMode,
+  Link,
+} from "@chakra-ui/react";
+import { FaGithub, FaLinkedinIn, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { useEffect } from "react";
 
 function App() {
@@ -11,14 +18,25 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <Heading
-          as="h1"
-          size="4xl"
-          fontWeight="700"
-          style={{ letterSpacing: "-0.1rem" }}
-        >
-          Hi, I'm
-        </Heading>
+        {colorMode === "light" ? (
+          <Heading
+            as="h1"
+            size="4xl"
+            fontWeight="700"
+            style={{ letterSpacing: "-0.1rem", color: "#2d3748" }}
+          >
+            Hi, I'm
+          </Heading>
+        ) : (
+          <Heading
+            as="h1"
+            size="4xl"
+            fontWeight="700"
+            style={{ letterSpacing: "-0.1rem", color: "white" }}
+          >
+            Hi, I'm
+          </Heading>
+        )}
         <Heading
           className="name"
           as="h1"
@@ -37,8 +55,8 @@ function App() {
           style={{ textAlign: "center" }}
         >
           Web Frontend Dev &{" "}
-          <span onClick={toggleColorMode} style={{cursor: "pointer"}}>
-            {colorMode  === 'light' ? '🤍' : '👨‍💻'} 
+          <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
+            {colorMode === "light" ? "🤍" : "👨‍💻"}
           </span>{" "}
           problem solving
         </Text>
@@ -46,8 +64,8 @@ function App() {
           <Button colorScheme="gray" leftIcon={<FaGithub />}>
             Github
           </Button>
-          <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
-            Twitter
+          <Button colorScheme="red" leftIcon={<FaEnvelope />}>
+            Gmail
           </Button>
           <Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
             LinkedIn
