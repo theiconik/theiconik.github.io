@@ -1,13 +1,13 @@
 import "./App.css";
 import { Heading, Text, Button, HStack, useColorMode } from "@chakra-ui/react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   useEffect(() => {
-    console.log('Tap on the heart for dark mode!')
-  }, [])
+    console.log("Tap on the heart for dark mode!");
+  }, []);
   return (
     <div className="App">
       <div className="content">
@@ -15,7 +15,6 @@ function App() {
           as="h1"
           size="4xl"
           fontWeight="700"
-          color="#2d3748"
           style={{ letterSpacing: "-0.1rem" }}
         >
           Hi, I'm
@@ -37,7 +36,11 @@ function App() {
           mb={6}
           style={{ textAlign: "center" }}
         >
-          Web Frontend Dev & 🤍 problem solving
+          Web Frontend Dev &{" "}
+          <span onClick={toggleColorMode} style={{cursor: "pointer"}}>
+            {colorMode  === 'light' ? '🤍' : '👨‍💻'} 
+          </span>{" "}
+          problem solving
         </Text>
         <HStack>
           <Button colorScheme="gray" leftIcon={<FaGithub />}>
@@ -48,9 +51,6 @@ function App() {
           </Button>
           <Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
             LinkedIn
-          </Button>
-          <Button onClick={toggleColorMode}>
-            Toggle {colorMode === "light" ? "Dark" : "Light"}
           </Button>
         </HStack>
       </div>
