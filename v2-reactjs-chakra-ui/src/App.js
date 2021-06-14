@@ -1,48 +1,60 @@
 import "./App.css";
-import { ChakraProvider, Heading, Text, Button, HStack } from "@chakra-ui/react";
-import {FaFacebook, FaGithub, FaLinkedinIn, FaTwitter} from 'react-icons/fa';
+import { Heading, Text, Button, HStack, useColorMode } from "@chakra-ui/react";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { useEffect } from "react"
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  useEffect(() => {
+    console.log('Tap on the heart for dark mode!')
+  }, [])
   return (
-    <ChakraProvider>
-      <div className="App">
-        <div className="content">
-          <Heading
-            as="h1"
-            size="4xl"
-            fontWeight="700"
-            color="#2d3748"
-            style={{ letterSpacing: "-0.1rem" }}
-          >
-            Hi, I'm
-          </Heading>
-          <Heading
-            className="name"
-            as="h1"
-            size="4xl"
-            color="#319795"
-            fontWeight="700"
-            style={{ letterSpacing: "-0.1rem" }}
-          >
-            Ujjawal Pandey
-          </Heading>
-          <Text fontSize="lg" color="gray.500" mt={12} mb={6} style={{textAlign: "center"}}>
-            Web Frontend Dev & 🤍 problem solving
-          </Text>
-          <HStack>
-            <Button colorScheme="blackAlpha" leftIcon={<FaGithub />}>
-              Github
-            </Button>
-            <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
-              Twitter
-            </Button>
-            <Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
-              LinkedIn
-            </Button>
-          </HStack>
-        </div>
+    <div className="App">
+      <div className="content">
+        <Heading
+          as="h1"
+          size="4xl"
+          fontWeight="700"
+          color="#2d3748"
+          style={{ letterSpacing: "-0.1rem" }}
+        >
+          Hi, I'm
+        </Heading>
+        <Heading
+          className="name"
+          as="h1"
+          size="4xl"
+          color="#319795"
+          fontWeight="700"
+          style={{ letterSpacing: "-0.1rem" }}
+        >
+          Ujjawal Pandey
+        </Heading>
+        <Text
+          fontSize="lg"
+          color="gray.500"
+          mt={12}
+          mb={6}
+          style={{ textAlign: "center" }}
+        >
+          Web Frontend Dev & 🤍 problem solving
+        </Text>
+        <HStack>
+          <Button colorScheme="gray" leftIcon={<FaGithub />}>
+            Github
+          </Button>
+          <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
+            Twitter
+          </Button>
+          <Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
+            LinkedIn
+          </Button>
+          <Button onClick={toggleColorMode}>
+            Toggle {colorMode === "light" ? "Dark" : "Light"}
+          </Button>
+        </HStack>
       </div>
-    </ChakraProvider>
+    </div>
   );
 }
 
