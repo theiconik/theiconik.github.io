@@ -22,6 +22,7 @@ function App() {
         {colorMode === "light" ? (
           <Heading
             as="h1"
+            className="hi"
             size="4xl"
             fontWeight="700"
             style={{ letterSpacing: "-0.1rem", color: "#2d3748" }}
