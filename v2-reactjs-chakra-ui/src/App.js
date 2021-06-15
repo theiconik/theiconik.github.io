@@ -5,11 +5,11 @@ import {
   Button,
   HStack,
   useColorMode,
-  Link,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedinIn, FaEnvelope, FaReact, FaSass, FaDatabase, FaTerminal, FaServer } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaReact, FaSass,} from "react-icons/fa";
 import { useEffect } from "react";
 import TextLoop from "react-text-loop";
+import { Server, Terminal, Database } from 'react-feather';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -55,8 +55,8 @@ function App() {
           style={{ textAlign: "center" }}
         >
           Web Frontend Dev &{" "}
-          <span onClick={toggleColorMode} style={{ cursor: "pointer" }}>
-            {colorMode === "light" ? " 🤍" : " 👨‍💻"}
+          <span className="heart" id="heart" onClick={toggleColorMode} style={{ cursor: "pointer" }}>
+            {colorMode === "light" ? " 🤍" : " ❤"}
           </span>{" "}
           problem solving
         </Text>
@@ -66,7 +66,7 @@ function App() {
               <Text color="gray.500">
                 I use C++&nbsp;
               </Text>
-              <FaTerminal style={{transform:'skewX(-15deg)'}} size={18} />
+              <Terminal style={{transform:'skewX(-15deg)'}} size={18} />
             </span>
             <span className="fuck">
               <Text color="gray.500">I use Reactjs&nbsp;</Text>
@@ -78,24 +78,24 @@ function App() {
             </span>
             <span className="fuck">
               <Text color="gray.500">I use PostgreSQL&nbsp;</Text>
-              <FaDatabase style={{transform:'skewX(-15deg)'}} size={18} />
+              <Database style={{transform:'skewX(-15deg)'}} size={17} />
             </span>
             <span className="fuck">
               <Text color="gray.500">I use Netlify&nbsp;</Text>
-              <FaServer style={{transform:'skewX(-15deg)'}} size={18} />
+              <Server style={{transform:'skewX(-15deg)'}} size={17} />
             </span>
           </TextLoop>
         </Text>
         <HStack>
-          <Button colorScheme="gray" leftIcon={<FaGithub />}>
+          <a href="https://github.com/theiconik" alt="GitHub"><Button colorScheme="gray" leftIcon={<FaGithub />}>
             Github
-          </Button>
-          <Button colorScheme="red" leftIcon={<FaEnvelope />}>
+          </Button></a>
+          <a href="mailto:kumarujjawal51@gmail.com" alt="Email"><Button colorScheme="red" leftIcon={<FaEnvelope />}>
             Gmail
-          </Button>
-          <Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
+          </Button></a>
+          <a href="https://linkedin.com/in/theiconik" alt="LinkedIn"><Button colorScheme="blue" leftIcon={<FaLinkedinIn />}>
             LinkedIn
-          </Button>
+          </Button></a>
         </HStack>
       </div>
     </div>
