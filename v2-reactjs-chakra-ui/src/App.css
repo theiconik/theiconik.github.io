@@ -40,4 +40,15 @@
     text-align: center;
     transform: scale(0.85);
   }
+
+  .hi{
+    transform: scale(0.85);
+  }
+
+  .designation {
+    transform: scale(0.90);
+  }
+  .fuck {
+    padding-right: 24px;
+  }
 }

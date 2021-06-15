@@ -26,16 +26,17 @@ function App() {
             fontWeight="700"
             style={{ letterSpacing: "-0.1rem", color: "#2d3748" }}
           >
-            Hi, I'm
+            Hi<span style={{ fontSize:"0.80em", position: "relative", bottom:"10px"}}>👋</span> I'm
           </Heading>
         ) : (
           <Heading
             as="h1"
+            className="hi"
             size="4xl"
             fontWeight="700"
             style={{ letterSpacing: "-0.1rem", color: "white" }}
           >
-            Hi, I'm
+            Hi<span style={{ fontSize:"0.80em", position: "relative", bottom:"10px"}}>👋</span> I'm
           </Heading>
         )}
         <Heading
@@ -53,12 +54,13 @@ function App() {
           color="gray.500"
           mt={12}
           style={{ textAlign: "center" }}
+          className="designation"
         >
-          Web Frontend Dev &{" "}
+          Web Frontend Dev{" "}
           <span className="heart" id="heart" onClick={toggleColorMode} style={{ cursor: "pointer" }}>
             {colorMode === "light" ? " 🤍" : " ❤"}
           </span>{" "}
-          problem solving
+           & Problem Solver!
         </Text>
         <Text mb={6}>
           <TextLoop>
