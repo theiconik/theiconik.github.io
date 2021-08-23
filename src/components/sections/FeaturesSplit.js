@@ -69,11 +69,11 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Project #1
                   </div>
-                <a href="https://piperchat.netlify.app/"><h3 className="mt-0 mb-12">
-                  piper-chat
+                <a href="https://spotolet.netlify.app/"><h3 className="mt-0 mb-12">
+                  spotolet
                   </h3></a>
                 <p className="m-0">
-                piper-chat 🤳 is a two-user video call app made using Reactjs and socket.io. Inspired by the series 'Silicon Valley', the whole layout/ theme of the app is based on the company 'Pied Piper'. The app is responsive but it needs work.
+                spotolet 📍 is a web app where users can find rent room/home locations and can post details about their vacant rent rooms/home. The app uses MERN stack and Mapbox-GL for the map.
                   </p>
               </div>
               <div className={
@@ -121,11 +121,11 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Project #3
                   </div>
-                <a href="https://movieslib.netlify.app/"><h3 className="mt-0 mb-12">
-                  movieslib
+                <a href="https://piperchat.netlify.app/"><h3 className="mt-0 mb-12">
+                  piper-chat
                   </h3></a>
                 <p className="m-0">
-                movieslib 👁‍🗨 is a React-based web app that allows users to add movies to their watchlist and keep track of their watched movies. The web app uses local storage and is not responsive.
+                piper-chat 🤳 is a two-user video call app made using Reactjs and socket.io. Inspired by the series 'Silicon Valley', the whole layout/ theme of the app is based on the company 'Pied Piper'. The app is responsive but it needs work.
                   </p>
               </div>
               <div className={
